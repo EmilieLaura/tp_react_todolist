@@ -1,6 +1,12 @@
-.checkbox {
-  width: 30px;
-  height: 30px;
+.status-todo {
+  border: 1px solid #2a353f;
+  color: #2a353f;
+}
+
+.status-finish {
+  background-color: #2a353f;
+  color: rgb(251, 249, 222);
+  border: 1px solid #2a353f;
 }
 
 .App-logo {

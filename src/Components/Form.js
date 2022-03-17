@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import Item from './Item';
+import {v4 as uuidv4} from 'uuid';
 
 export default function Form() {
 
@@ -13,7 +14,7 @@ export default function Form() {
         const newTodo = {}; // création d'un nouvel objet
         newTodo.txt = stateInput; // on lui ajoute les propriétés
         newTodo.comment = stateComment;
-        // newTodo.id = '';
+        newTodo.id = uuidv4();
 
         newList.push(newTodo);
         setDataList(newList);
@@ -52,21 +53,19 @@ export default function Form() {
 
             <h2 className="mt-5">Liste des tâches :</h2>
 
-            <ul className="list-group">
-                {dataList.map(item => {
-                    return (
-                        <div>
-                            <Item
-                            txt={item.txt}
-                            comment={item.comment}
-                            key={item.id}
-                            id={item.id}
-                            delete={deleteItem}
-                            />
-                        </div>
-                    )
-                })}
-            </ul>
+            {dataList.map(item => {
+                return (
+                    <div className="mb-3">
+                        <Item
+                        txt={item.txt}
+                        comment={item.comment}
+                        key={item.id}
+                        id={item.id}
+                        delete={deleteItem}
+                        />
+                    </div>
+                )
+            })}
         </div>
     )
 }

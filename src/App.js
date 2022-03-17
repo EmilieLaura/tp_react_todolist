@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Title from './Components/Title';
+import Subtitle from "./Components/Subtitle";
+import Form from './Components/Form';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title title={"Todo-List"}/>
+      <Subtitle subtitle={"Du 14 au 21 mars"}/>
+
+      <Form/>
     </div>
   );
 }

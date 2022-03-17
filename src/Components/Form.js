@@ -39,6 +39,10 @@ export default function Form() {
         setDataList(filterState);
     }
 
+    const changeItem = id => {
+       
+    }
+
 
     return (
         <div className="m-auto px-4 col-12 col-sm-10 col-lg-6">
@@ -64,6 +68,7 @@ export default function Form() {
                             status={item.status}
                             key={item.id}
                             id={item.id}
+                            change={changeItem}
                             delete={deleteItem}
                             />
                         </div>

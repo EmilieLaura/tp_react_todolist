@@ -7,8 +7,8 @@ export default function Item(props) {
                 <p className="p-2">{props.comment}</p>
             </div>
 
-            <div>         
-                {/* <input className=" p-2 m-2 checkbox" type="checkbox" onChange={e => changeItem(e.target.value)}/> */}
+            <div>
+                <button className="btn btn-primary p-2 m-2" onClick={() => props.change(props.id)}>Terminer</button>
 
                 <button className="btn btn-danger p-2 m-2" onClick={() => props.delete(props.id)}>Supprimer</button>
             </div>

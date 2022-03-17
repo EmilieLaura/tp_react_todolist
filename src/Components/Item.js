@@ -8,8 +8,6 @@ export default function Item(props) {
             </div>
 
             <div>
-                <button className="btn btn-primary p-2 m-2" onClick={() => props.change(props.id)}>Terminer</button>
-
                 <button className="btn btn-danger p-2 m-2" onClick={() => props.delete(props.id)}>Supprimer</button>
             </div>
         </li>
